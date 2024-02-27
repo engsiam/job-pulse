@@ -2,7 +2,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
- || Login
+ -- Login
 @endsection
 
 @section('content')
@@ -13,10 +13,10 @@
     <section id="wsus__login_register">
         <div class="container">
             <div class="row">
-                <div class="col-xl-5 m-auto">
+                <div class="m-auto col-xl-5">
                     <div class="wsus__login_reg_area">
                         <h3 class="mb-3 text-center">Be a Candidate</h3>
-                        <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+                        <ul class="mb-3 nav nav-pills" id="pills-tab2" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab2" data-bs-toggle="pill"
                                     data-bs-target="#pills-homes" type="button" role="tab" aria-controls="pills-homes"
@@ -31,8 +31,8 @@
                         <div class="tab-content" id="pills-tabContent2">
                             <div class="tab-pane fade show active" id="pills-homes" role="tabpanel"
                                 aria-labelledby="pills-home-tab2">
-                                <div class="wsus__login text-center">
-                                    
+                                <div class="text-center wsus__login">
+
                                     <form action="{{route('candidate.login')}}" method="POST">
                                         @csrf
                                         <div class="wsus__login_input">
@@ -55,11 +55,11 @@
                                             </div>
                                             <a class="forget_p" href="{{ route('password.request') }}">forget password ?</a>
                                         </div>
-                                        
+
                                         <button class="common_btn" type="submit">login</button>
                                     </form>
 
-                                    <a class="btn btn-danger mt-3" href="{{ route('login.google') }}"><i class="fab fa-google"></i> Login With Google</a>
+                                    {{-- <a class="mt-3 btn btn-danger" href="{{ route('login.google') }}"><i class="fab fa-google"></i> Login With Google</a> --}}
 
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                                             <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm Password">
                                         </div>
 
-                                        <button class="common_btn mt-4" type="submit">signup</button>
+                                        <button class="mt-4 common_btn" type="submit">signup</button>
                                     </form>
                                 </div>
                             </div>
