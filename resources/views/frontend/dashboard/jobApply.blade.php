@@ -1,7 +1,7 @@
 @extends('frontend.dashboard.layouts.master')
 
 @section('title')
-   || Job Apply
+   -- Job Apply
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
 
                     <div class="dashboard_content mt-2 mt-md-0">
                         <h3><i class="far fa-user"></i>All Job Applied</h3>
-    
+
                         <div class="wsus__dashboard_profile">
                             <div class="wsus__dash_pro_area">
                                 {{ $dataTable->table() }}
